@@ -8,7 +8,7 @@ function calculatePrice() {
   
     // Update the output field
     const output = document.getElementById("price");
-    output.textContent = price.toFixed(3);
+    output.textContent = "$" + price.toFixed(3);
 
     // Update ##
     const words = document.getElementById("images");
