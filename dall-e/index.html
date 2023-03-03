@@ -54,12 +54,16 @@
       <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
         <div class="mb-4">
           <label for="input" class="block text-gray-700 font-bold mb-2">Enter number of images:</label>
-          <input type="number" id="input" oninput="calculatePrice()" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-indigo-500 focus:shadow-outline-indigo focus:outline-none">
+          <input type="number" id="input" value="10" oninput="calculatePrice()" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-indigo-500 focus:shadow-outline-indigo focus:outline-none">
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              calculatePrice();
+            });
+          </script>
           <div class="flex space-x-2 mt-2 mb-6">
-            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-700" onclick="document.getElementById('input').value=10; calculatePrice();">10</button>
             <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-700" onclick="document.getElementById('input').value=100; calculatePrice();">100</button>
             <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-700" onclick="document.getElementById('input').value=500; calculatePrice();">500</button>
-            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-700" onclick="document.getElementById('input').value=1000; calculatePrice();">1k</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-700" onclick="document.getElementById('input').value=1000; calculatePrice();">1,000</button>
             <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-700" onclick="document.getElementById('input').value=10000; calculatePrice();">10k</button>
           </div>
         </div>
