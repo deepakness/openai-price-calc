@@ -74,24 +74,32 @@
           <p class="block text-gray-700 font-bold mb-2">Select the base language model:</p>
           <div class="block">
             <div class="flex items-center mb-2">
-              <input type="radio" id="multiplier5" name="multiplier" value="0.002" checked="checked" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier1">ChatGPT <span class="text-gray-400">($0.002/1k tokens)</span></label>
+              <input type="radio" id="multiplier1" name="multiplier" value="0.06" checked="checked" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier1">GPT-4 8K<span class="text-gray-400">($0.06/1k tokens)</span></label>
             </div>
             <div class="flex items-center mb-2">
-              <input type="radio" id="multiplier1" name="multiplier" value="0.02" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier2">Davinci <span class="text-gray-400">($0.02/1k tokens)</span></label>
+              <input type="radio" id="multiplier2" name="multiplier" value="0.12" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier2">GPT-4 32K<span class="text-gray-400">($0.12/1k tokens)</span></label>
             </div>
             <div class="flex items-center mb-2">
-              <input type="radio" id="multiplier2" name="multiplier" value="0.002" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier3">Curie <span class="text-gray-400">($0.002/1k tokens)</span></label>
+              <input type="radio" id="multiplier3" name="multiplier" value="0.002" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier3">ChatGPT <span class="text-gray-400">($0.002/1k tokens)</span></label>
             </div>
             <div class="flex items-center mb-2">
-              <input type="radio" id="multiplier3" name="multiplier" value="0.005" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier4">Babbage <span class="text-gray-400">($0.005/1k tokens)</span></label>
+              <input type="radio" id="multiplier4" name="multiplier" value="0.02" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier4">Davinci <span class="text-gray-400">($0.02/1k tokens)</span></label>
             </div>
             <div class="flex items-center mb-2">
-              <input type="radio" id="multiplier4" name="multiplier" value="0.0004" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier5">Ada <span class="text-gray-400">($0.0004/1k tokens)</span></label>
+              <input type="radio" id="multiplier5" name="multiplier" value="0.002" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier5">Curie <span class="text-gray-400">($0.002/1k tokens)</span></label>
+            </div>
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier6" name="multiplier" value="0.005" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier6">Babbage <span class="text-gray-400">($0.005/1k tokens)</span></label>
+            </div>
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier7" name="multiplier" value="0.0004" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier7">Ada <span class="text-gray-400">($0.0004/1k tokens)</span></label>
             </div>
           </div>
         </div>
@@ -105,6 +113,9 @@
       <p class="text-gray-700 mb-4 max-w-lg mx-auto">But if your prompt length is different than the assumed value of 100 words per 1000 generated words, you can enter the value in the above field. And the final estimated price will be updated.</p>
       <h2 class="text-xl font-bold mb-4 mt-6 max-w-lg mx-auto">How does it work?</h2>
       <p class="text-gray-700 mb-4 max-w-lg mx-auto">This calculator takes the information provided on the official <a class="text-blue-500" href="https://openai.com/pricing" target="_blank" rel="noopener noreferrer">OpenAI website</a> to calculate the estimated price based on the number of words. The calculator assumes that 1000 tokens are about 750 words, as OpenAI recommends; but if you want to understand tokens better, you can <a class="text-blue-500" href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener noreferrer">look here</a>.</p>
+      <blockquote class="text-gray-700 italic border-l-2 pl-4 mb-6">
+        For GPT-4 (8K) and 32K, the prompt prices are $0.03/1k tokens and $0.06/1k tokens respectively as the prompt and completion prices are different.
+      </blockquote>
       <p class="text-gray-700 mb-4 max-w-lg mx-auto">Apart from this, I have also created the <strong><a class="text-blue-500" href="/dall-e/">DALL-E Price Calculator</a></strong> and <strong><a class="text-blue-500" href="/whisper/">Whisper Price Calculator</a></strong> that you may find helpful.</p>
     </div>
   </body>
