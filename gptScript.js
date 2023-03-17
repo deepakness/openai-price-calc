@@ -7,9 +7,9 @@ function calculatePrice() {
   
     // Calculate the price
     let price;
-    if (checkMultiplier == multiplier1) {
+    if (checkMultiplier == "multiplier1") {
       price = (input / 750 * multiplier) + ((input / 1000) * (prompt / 750) * 0.03);
-    } else if (checkMultiplier == multiplier2) {
+    } else if (checkMultiplier == "multiplier2") {
       price = (input / 750 * multiplier) + ((input / 1000) * (prompt / 750) * 0.06);
     } else {
       price = (input / 750 * multiplier) + ((input / 1000) * (prompt / 750) * multiplier);
