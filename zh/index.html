@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <!-- Primary Meta Tags -->
+    <title>OpenAI GPT价格计算器</title>
+    <meta name="title" content="OpenAI GPT价格计算器">
+    <meta name="description" content="通过这个简单直观的价格计算器，计算出在你的下一个项目中使用OpenAI的GPT语言模型的估计成本。">
+    <link rel="canonical" href="https://openai.deepakness.com/zh/" />
+    <link rel="alternate" hreflang="es" href="https://openai.deepakness.com/es/">
+    <link rel="alternate" hreflang="fr" href="https://openai.deepakness.com/fr/">
+    <link rel="alternate" hreflang="en" href="https://openai.deepakness.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://openai.deepakness.com/zh/">
+    <meta property="og:title" content="OpenAI GPT价格计算器">
+    <meta property="og:description" content="通过这个简单直观的价格计算器，计算出在你的下一个项目中使用OpenAI的GPT语言模型的估计成本。">
+    <meta property="og:image" content="https://openai.deepakness.com/assets/og.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://openai.deepakness.com/zh/">
+    <meta property="twitter:title" content="OpenAI GPT价格计算器">
+    <meta property="twitter:description" content="通过这个简单直观的价格计算器，计算出在你的下一个项目中使用OpenAI的GPT语言模型的估计成本。">
+    <meta property="twitter:image" content="https://openai.deepakness.com/assets/og.png">
+
+    <!-- Site Icon -->
+    <link rel="icon" type="image/png" href="https://openai.deepakness.com/assets/icon.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+    
+    <!-- Script file -->
+    <script src="./gptScript.js"></script>
+
+    <!-- GSC -->
+    <meta name="google-site-verification" content="uCM8NwTbuGgtF9XVaeRKl2Tn2r-Pz4xbW-ia6TOQ5j4" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WGF4XXTT9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3WGF4XXTT9');
+    </script>
+
+  </head>
+  <body class="bg-gray-100">
+    <div style="align-items: center;" class="max-w-lg mx-auto mt-8">
+      <a href="https://www.producthunt.com/posts/openai-gpt-price-calculator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-openai&#0045;gpt&#0045;price&#0045;calculator" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=381979&theme=light" alt="OpenAI&#0032;GPT&#0032;Price&#0032;Calculator - Estimate&#0032;price&#0032;for&#0032;using&#0032;OpenAI&#0032;API | Product Hunt" style="width: 200px; height: 40px;" width="200" height="40" /></a>
+    </div>
+    <div class="container max-w-lg mx-auto py-8 px-4 md:px-0">
+      <h1 class="text-2xl font-bold mb-6 max-w-lg mx-auto">OpenAI GPT价格计算器</h1>
+      <p class="text-gray-700 mb-6 max-w-lg mx-auto">计算使用OpenAI的GPT-3.5和GPT-4 API生成一定数量的单词需要多少钱。</p>
+      <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg mb-10">
+        <div class="mb-4">
+          <label for="input" class="block text-gray-700 font-bold mb-2">输入字数：</label>
+          <input type="number" id="input" value="1000" oninput="calculatePrice()" class="w-full px-4 py-2 rounded-lg border border-gray-400 focus:border-indigo-500 focus:shadow-outline-indigo focus:outline-none" style="-webkit-appearance: none;">
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              calculatePrice();
+            });
+          </script>
+          <div class="flex flex-wrap space-x-2 mt-2 mb-6">
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=1000; calculatePrice();">1千字</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=10000; calculatePrice();">10千字</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=100000; calculatePrice();">10万字</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=500000; calculatePrice();">50万字</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=1000000; calculatePrice();">100万字</button>
+          </div>
+        </div>
+        <div class="mb-4">
+          <p class="block text-gray-700 font-bold mb-2">选择基础语言模式：</p>
+          <div class="block">
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier1" name="multiplier" value="0.06" checked="checked" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier1">GPT-4 8K <span class="text-gray-400">(0.06美元/1千代币)</span></label>
+            </div>
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier2" name="multiplier" value="0.12" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier2">GPT-4 32K <span class="text-gray-400">(0.12美元/1千代币)</span></label>
+            </div>
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier3" name="multiplier" value="0.002" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier3">ChatGPT <span class="text-gray-400">(0.002美元/1千代币)</span></label>
+            </div>
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier4" name="multiplier" value="0.02" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier4">Davinci <span class="text-gray-400">(0.02美元/1千代币)</span></label>
+            </div>
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier5" name="multiplier" value="0.002" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier5">Curie <span class="text-gray-400">(0.002美元/1千代币)</span></label>
+            </div>
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier6" name="multiplier" value="0.005" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier6">Babbage <span class="text-gray-400">(0.005美元/1千代币)</span></label>
+            </div>
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier7" name="multiplier" value="0.0004" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier7">Ada <span class="text-gray-400">(0.0004美元/1千代币)</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 mt-6">
+          <p class="block text-gray-700 font-bold mb-2">产生<span class="text-green-500 text-l" id="words"></span>字的估计价格: <span class="text-green-500 text-l" id="price"></span></p>
+        </div>
+      </div>
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">由于OpenAI根据您在提示中发送的令牌数和API返回的令牌数向您收费，我假设API每生成1000个字，提示长度为100字。我也将这一成本加入到最终成本中。</p>
+      <label for="input" class="block text-gray-700 font-bold mb-2">输入提示长度（每1000字大约有多少字）：</label>
+          <input type="number" id="prompt" value="100" oninput="calculatePrice()" class="w-full px-4 py-2 mb-6 rounded-lg border border-gray-400 focus:border-indigo-500 focus:shadow-outline-indigo focus:outline-none" style="-webkit-appearance: none;">
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">但如果你的提示长度与每1000个生成字数100字的假设值不同，你可以在上述字段中输入该值。而最终的估计价格会被更新。</p>
+      <blockquote class="text-gray-700 italic border-l-2 pl-4 mb-6">
+        对于GPT-4（8K）和GPT-4（32K）语境，提示价格分别为0.03美元/1千代币和0.06美元/1千代币。
+      </blockquote>
+      <h2 class="text-xl font-bold mb-4 mt-6 max-w-lg mx-auto">How does it work?</h2>
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">这个计算器以<a class="text-blue-500" href="https://openai.com/pricing" target="_blank" rel="noopener noreferrer">OpenAI</a>官方网站提供的信息为基础，根据字数计算出估计价格。该计算器假设1000个代币约为750个字，正如OpenAI所建议的那样；但如果你想更好地了解代币，<a class="text-blue-500" href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener noreferrer">你可以看看这里。</a></p>
+    </div>
+  </body>
+  <footer class="bg-gray-100 py-4">
+    <hr class="my-4 mx-auto max-w-sm md:max-w-lg border-gray-300">
+    <div class="max-w-lg mx-auto px-4 md:px-0">
+      <p class="mt-2 mb-8 text-center text-gray-500 text-sm md:text-base">
+        🌐 <a class="text-blue-500" href="/">EN</a> | <a class="text-blue-500" href="/es/">ES</a> | <a class="text-blue-500" href="/fr/">FR</a>
+      </p>
+      <p class="mt-2 text-center text-gray-500 text-sm md:text-base">由<a class="text-blue-500 hover:text-blue-600" href="https://twitter.com/DeepakNesss" target="_blank" rel="noopener noreferrer">DeepakNess</a>创建</p>
+    </div>
+  </footer>  
+</html>
