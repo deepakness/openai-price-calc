@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Primary Meta Tags -->
-    <title>OpenAI GPT Price Calculator</title>
-    <meta name="title" content="OpenAI GPT Price Calculator">
-    <meta name="description" content="Calculate the estimated cost of using OpenAI's GPT language model for your next project with this simple and intuitive price calculator.">
-    <link rel="canonical" href="https://openai.deepakness.com/" />
+    <title>Calculateur de prix OpenAI GPT</title>
+    <meta name="title" content="Calculateur de prix OpenAI GPT">
+    <meta name="description" content="Calculez le coût estimé de l'utilisation du modèle de langage GPT d'OpenAI pour votre prochain projet grâce à ce calculateur de prix simple et intuitif.">
+    <link rel="canonical" href="https://openai.deepakness.com/fr/" />
+    <link rel="alternate" hreflang="en" href="https://openai.deepakness.com/">
     <link rel="alternate" hreflang="es" href="https://openai.deepakness.com/es/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://openai.deepakness.com/">
-    <meta property="og:title" content="OpenAI GPT Price Calculator">
-    <meta property="og:description" content="Calculate the estimated cost of using OpenAI's GPT language model for your next project with this simple and intuitive price calculator.">
+    <meta property="og:url" content="https://openai.deepakness.com/fr/">
+    <meta property="og:title" content="Calculateur de prix OpenAI GPT">
+    <meta property="og:description" content="Calculez le coût estimé de l'utilisation du modèle de langage GPT d'OpenAI pour votre prochain projet grâce à ce calculateur de prix simple et intuitif.">
     <meta property="og:image" content="https://openai.deepakness.com/assets/og.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://openai.deepakness.com/">
-    <meta property="twitter:title" content="OpenAI GPT Price Calculator">
-    <meta property="twitter:description" content="Calculate the estimated cost of using OpenAI's GPT language model for your next project with this simple and intuitive price calculator.">
+    <meta property="twitter:url" content="https://openai.deepakness.com/fr/">
+    <meta property="twitter:title" content="Calculateur de prix OpenAI GPT">
+    <meta property="twitter:description" content="Calculez le coût estimé de l'utilisation du modèle de langage GPT d'OpenAI pour votre prochain projet grâce à ce calculateur de prix simple et intuitif.">
     <meta property="twitter:image" content="https://openai.deepakness.com/assets/og.png">
 
     <!-- Site Icon -->
-    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <link rel="icon" type="image/png" href="https://openai.deepakness.com/assets/icon.png">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,11 +52,11 @@
       <a href="https://www.producthunt.com/posts/openai-gpt-price-calculator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-openai&#0045;gpt&#0045;price&#0045;calculator" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=381979&theme=light" alt="OpenAI&#0032;GPT&#0032;Price&#0032;Calculator - Estimate&#0032;price&#0032;for&#0032;using&#0032;OpenAI&#0032;API | Product Hunt" style="width: 200px; height: 40px;" width="200" height="40" /></a>
     </div>
     <div class="container max-w-lg mx-auto py-8 px-4 md:px-0">
-      <h1 class="text-2xl font-bold mb-6 max-w-lg mx-auto">OpenAI GPT Price Calculator</h1>
-      <p class="text-gray-700 mb-6 max-w-lg mx-auto">Calculate how much it will cost to generate certain number of words by using OpenAI GPT-3.5 and GPT-4 APIs.</p>
+      <h1 class="text-2xl font-bold mb-6 max-w-lg mx-auto">Calculateur de prix OpenAI GPT</h1>
+      <p class="text-gray-700 mb-6 max-w-lg mx-auto">Calculer le coût de la génération d'un certain nombre de mots en utilisant les API OpenAI GPT-3.5 et GPT-4.</p>
       <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg mb-10">
         <div class="mb-4">
-          <label for="input" class="block text-gray-700 font-bold mb-2">Enter number of words:</label>
+          <label for="input" class="block text-gray-700 font-bold mb-2">Saisir le nombre de mots:</label>
           <input type="number" id="input" value="1000" oninput="calculatePrice()" class="w-full px-4 py-2 rounded-lg border border-gray-400 focus:border-indigo-500 focus:shadow-outline-indigo focus:outline-none" style="-webkit-appearance: none;">
           <script>
             document.addEventListener("DOMContentLoaded", function() {
@@ -72,61 +73,60 @@
           </div>
         </div>
         <div class="mb-4">
-          <p class="block text-gray-700 font-bold mb-2">Select the base language model:</p>
+          <p class="block text-gray-700 font-bold mb-2">Sélectionnez le modèle de langue de base:</p>
           <div class="block">
             <div class="flex items-center mb-2">
               <input type="radio" id="multiplier1" name="multiplier" value="0.06" checked="checked" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier1">GPT-4 8K <span class="text-gray-400">($0.06/1k tokens)</span></label>
+              <label for="multiplier1">GPT-4 8K <span class="text-gray-400">($0.06/1k jetons)</span></label>
             </div>
             <div class="flex items-center mb-2">
               <input type="radio" id="multiplier2" name="multiplier" value="0.12" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier2">GPT-4 32K <span class="text-gray-400">($0.12/1k tokens)</span></label>
+              <label for="multiplier2">GPT-4 32K <span class="text-gray-400">($0.12/1k jetons)</span></label>
             </div>
             <div class="flex items-center mb-2">
               <input type="radio" id="multiplier3" name="multiplier" value="0.002" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier3">ChatGPT <span class="text-gray-400">($0.002/1k tokens)</span></label>
+              <label for="multiplier3">ChatGPT <span class="text-gray-400">($0.002/1k jetons)</span></label>
             </div>
             <div class="flex items-center mb-2">
               <input type="radio" id="multiplier4" name="multiplier" value="0.02" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier4">Davinci <span class="text-gray-400">($0.02/1k tokens)</span></label>
+              <label for="multiplier4">Davinci <span class="text-gray-400">($0.02/1k jetons)</span></label>
             </div>
             <div class="flex items-center mb-2">
               <input type="radio" id="multiplier5" name="multiplier" value="0.002" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier5">Curie <span class="text-gray-400">($0.002/1k tokens)</span></label>
+              <label for="multiplier5">Curie <span class="text-gray-400">($0.002/1k jetons)</span></label>
             </div>
             <div class="flex items-center mb-2">
               <input type="radio" id="multiplier6" name="multiplier" value="0.005" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier6">Babbage <span class="text-gray-400">($0.005/1k tokens)</span></label>
+              <label for="multiplier6">Babbage <span class="text-gray-400">($0.005/1k jetons)</span></label>
             </div>
             <div class="flex items-center mb-2">
               <input type="radio" id="multiplier7" name="multiplier" value="0.0004" onchange="calculatePrice()" class="mr-2">
-              <label for="multiplier7">Ada <span class="text-gray-400">($0.0004/1k tokens)</span></label>
+              <label for="multiplier7">Ada <span class="text-gray-400">($0.0004/1k jetons)</span></label>
             </div>
           </div>
         </div>
         <div class="mb-4 mt-6">
-          <p class="block text-gray-700 font-bold mb-2">Estimated price to generate <span class="text-green-500 text-l" id="words"></span> words: <span class="text-green-500 text-l" id="price"></span></p>
+          <p class="block text-gray-700 font-bold mb-2">Prix estimé pour générer <span class="text-green-500 text-l" id="words"></span> mots: <span class="text-green-500 text-l" id="price"></span></p>
         </div>
       </div>
-      <p class="text-gray-700 mb-4 max-w-lg mx-auto">As OpenAI bills you based on the number of tokens sent in your prompt plus the number of tokens returned by the API, I am taking an assumption of prompt length of 100 words for each 1000 words generated by the API. I am adding that cost to the final cost as well.</p>
-      <label for="input" class="block text-gray-700 font-bold mb-2">Enter the prompt length (approx. words per 1000 words):</label>
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">Comme OpenAI vous facture sur la base du nombre de jetons envoyés dans votre invite plus le nombre de jetons renvoyés par l'API, je pars du principe que la longueur de l'invite est de 100 mots pour chaque millier de mots générés par l'API. J'ajoute également ce coût au coût final.</p>
+      <label for="input" class="block text-gray-700 font-bold mb-2">Saisissez la longueur de l'invite (environ mots par 1000 mots):</label>
           <input type="number" id="prompt" value="100" oninput="calculatePrice()" class="w-full px-4 py-2 mb-6 rounded-lg border border-gray-400 focus:border-indigo-500 focus:shadow-outline-indigo focus:outline-none" style="-webkit-appearance: none;">
-      <p class="text-gray-700 mb-4 max-w-lg mx-auto">But if your prompt length is different than the assumed value of 100 words per 1000 generated words, you can enter the value in the above field. And the final estimated price gets updated.</p>
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">Mais si la longueur de votre texte est différente de la valeur supposée de 100 mots pour 1000 mots générés, vous pouvez saisir la valeur dans le champ ci-dessus. Le prix final estimé est alors mis à jour.</p>
       <blockquote class="text-gray-700 italic border-l-2 pl-4 mb-6">
-        For GPT-4 (8K) and GPT-4 (32K) contexts, the prompt prices are $0.03/1k tokens and $0.06/1k tokens respectively.
+        Pour les contextes GPT-4 (8K) et GPT-4 (32K), les prix d'appel sont respectivement de 0,03 $/1k jeton et 0,06 $/1k jeton.
       </blockquote>
-      <h2 class="text-xl font-bold mb-4 mt-6 max-w-lg mx-auto">How does it work?</h2>
-      <p class="text-gray-700 mb-4 max-w-lg mx-auto">This calculator takes the information provided on the official <a class="text-blue-500" href="https://openai.com/pricing" target="_blank" rel="noopener noreferrer">OpenAI website</a> to calculate the estimated price based on the number of words. The calculator assumes that 1000 tokens are about 750 words, as OpenAI recommends; but if you want to understand tokens better, you can <a class="text-blue-500" href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener noreferrer">look here</a>.</p>
-      <p class="text-gray-700 mb-4 max-w-lg mx-auto">Apart from this, I have also created the <strong><a class="text-blue-500" href="/dall-e/">DALL-E Price Calculator</a></strong> and <strong><a class="text-blue-500" href="/whisper/">Whisper Price Calculator</a></strong> that you may find helpful.</p>
+      <h2 class="text-xl font-bold mb-4 mt-6 max-w-lg mx-auto">Comment cela fonctionne-t-il?</h2>
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">Cette calculatrice utilise les informations fournies sur le <a class="text-blue-500" href="https://openai.com/pricing" target="_blank" rel="noopener noreferrer">site officiel de l'OpenAI</a> pour calculer le prix estimé en fonction du nombre de mots. La calculatrice part du principe que 1000 jetons correspondent à environ 750 mots, comme le recommande OpenAI ; mais si vous voulez mieux comprendre les jetons, <a class="text-blue-500" href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener noreferrer">vous pouvez regarder ici</a>.</p>
     </div>
   </body>
   <footer class="bg-gray-100 py-4">
     <hr class="my-4 mx-auto max-w-sm md:max-w-lg border-gray-300">
     <div class="max-w-lg mx-auto px-4 md:px-0">
-      <p class="mt-2 mb-8 text-center text-gray-500 text-sm md:text-base">
-        🌐 <a class="text-blue-500" href="/es/">ES</a> | <a class="text-blue-500" href="/fr/">FR</a>
+      <p class="mt-2 mb-8 text-center text-blue-500 text-sm md:text-base">
+        🌐 <a class="text-blue-500" href="/">EN</a> | <a class="text-blue-500" href="/es/">ES</a>
       </p>
-      <p class="mt-2 text-center text-gray-500 text-sm md:text-base">Created by <a class="text-blue-500 hover:text-blue-600" href="https://twitter.com/DeepakNesss" target="_blank" rel="noopener noreferrer">DeepakNess</a></p>
+      <p class="mt-2 text-center text-gray-500 text-sm md:text-base">Créé par <a class="text-blue-500 hover:text-blue-600" href="https://twitter.com/DeepakNesss" target="_blank" rel="noopener noreferrer">DeepakNess</a></p>
     </div>
   </footer>  
 </html>
