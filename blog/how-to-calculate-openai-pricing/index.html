@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/blogstyle.css" />
+
+    <!-- Primary Meta Tags -->
+    <title>How to Estimate Pricing for using OpenAI API</title>
+    <meta name="title" content="How to Estimate Pricing for using OpenAI API">
+    <meta name="description" content="Learn how to estimate price for generating certain number of words using OpenAI APIs.">
+    <link rel="canonical" href="https://openai.deepakness.com/how-to-calculate-openai-pricing/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://openai.deepakness.com/how-to-calculate-openai-pricing/">
+    <meta property="og:title" content="How to Estimate Pricing for using OpenAI API">
+    <meta property="og:description" content="Learn how to estimate price for generating certain number of words using OpenAI APIs.">
+    <meta property="og:image" content="https://openai.deepakness.com/assets/og.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://openai.deepakness.com/how-to-calculate-openai-pricing/">
+    <meta property="twitter:title" content="How to Estimate Pricing for using OpenAI API">
+    <meta property="twitter:description" content="Learn how to estimate price for generating certain number of words using OpenAI APIs.">
+    <meta property="twitter:image" content="https://openai.deepakness.com/assets/og.png">
+
+    <!-- Site Icon -->
+    <link rel="icon" type="image/png" href="https://openai.deepakness.com/assets/icon.png">
+
+    <!-- GSC -->
+    <meta name="google-site-verification" content="uCM8NwTbuGgtF9XVaeRKl2Tn2r-Pz4xbW-ia6TOQ5j4" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WGF4XXTT9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3WGF4XXTT9');
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <a href="/" class="site-name">🧮</a>
+        <nav class="menu">
+          <a href="/" class="menu-item">Home</a>
+          <a href="/blog/" class="menu-item">Blog</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+        <main>
+            <div class="post-meta">
+                <h1>How to Estimate Pricing for using OpenAI API</h1>
+                <p>April 4, 2023</p>
+            </div>
+            <p>
+                OpenAI's ChatGPT API enables developers to create interactive and dynamic conversations with the AI model. As developers begin to
+                integrate the API into their applications, it's crucial to estimate the cost of generating a certain number of words to manage expenses and allocate resources efficiently. Having a clear understanding of the cost structure allows businesses to develop sustainable and cost-effective AI strategies.
+            </p>
+
+            <p>
+                In this blog post, we'll discuss how to <a href="/">estimate the price for generating a specific number of words</a> using the OpenAI API and take a look at an example.
+            </p>
+
+            <h2>Understanding OpenAI API Pricing</h2>
+
+            <h3>Tokens and Words</h3>
+
+            <p>
+                OpenAI's API charges users based on the number of tokens. In the context of the API, a token can be a single character or a word, on
+                the language. On average, 1000 tokens in English correspond to about 750 words. However, the actual number of words may vary depending on the specific content generated.
+            </p>
+
+            <h3>Cost per Token</h3>
+
+            <p>
+                To calculate the price for generating a certain number of words, we need to convert the desired number of words into tokens and then multiply by the cost per token.
+            </p>
+
+            <p>
+                For your information, <a href="https://openai.com/pricing">here are the prices</a> for different OpenAI base language models:
+            </p>
+
+            <ul>
+                <li>GPT-4 8K ($0.06/1k tokens)</li>
+                <li>GPT-4 32K ($0.12/1k tokens)</li>
+                <li>ChatGPT ($0.002/1k tokens)</li>
+                <li>Davinci ($0.02/1k tokens)</li>
+                <li>Curie ($0.002/1k tokens)</li>
+                <li>Babbage ($0.005/1k tokens)</li>
+                <li>Ada ($0.0004/1k tokens)</li>
+            </ul>
+
+            <h2>Estimating Price for Generating a Specific Number of Words</h2>
+
+            <p>
+                To estimate the price for generating a certain number of words, follow these steps:
+            </p>
+
+            <ol>
+                <li>
+                Determine the desired number of words: Decide on the number of words you want the API to generate.
+                </li>
+                <li>
+                Convert words to tokens: Use the average conversion rate of 1000 tokens being equal to 750 words to calculate the approximate number of tokens required for your desired word count.
+                </li>
+                <li>
+                Calculate cost: Multiply the number of tokens by the cost per token to obtain the estimated price for generating the desired number of words.
+                </li>
+            </ol>
+
+            <p>Here's a simple formula to help with the calculation:</p>
+
+            <p class="formula">
+                Estimated Price = (Desired Number of Words / 750) * (Cost per 1000 Tokens)
+            </p>
+
+            <p>
+                But... OpenAI bills you based on the number of tokens sent in your prompt plus the number of tokens returned by the API. So the modified formula should be:
+            </p>
+
+            <p class="formula">
+                Estimated Price = (Number of Words Sent as Prompts * Cost per 1000
+                Tokens / 750) + (Number of Words Generated * Cost per 1000 Tokens / 750)
+            </p>
+
+            <blockquote>
+                <p>
+                Keep in mind that the actual number of tokens might vary from the estimate. To get a more accurate cost, you can count the tokens used in the API response and multiply by the cost per token.
+                </p>
+            </blockquote>
+
+            <h2>Example:</h2>
+
+            <p>
+                Let's say we want to generate approximately 1500 words of content using the GPT-4 8K API. Using the formula mentioned earlier, we can estimate the cost as follows:
+            </p>
+
+            <ul>
+                <li>Desired number of words: 1500 words</li>
+                <li>Completion price: $0.06 per 1000 tokens (or per 750 words)</li>
+                <li>Prompt length: 100 words (let's assume)</li>
+                <li>Prompt price: $0.03 per 1000 tokens (or per 750 words)</li>
+            </ul>
+
+            <p>Estimated price: (1500 / 750 * 0.06) + (100 / 750 * 0.03) = $0.124</p>
+
+            <p>
+                Thus, the estimated price for generating 1500 words using the GPT-4 8K API is $0.124. Remember, this is an estimate, and the actual cost may vary depending on the exact number of tokens used in generating the content.
+            </p>
+
+            <img src="https://openai.deepakness.com/assets/og.png" alt="OpenAI Pricing Calculator">
+
+            <h2>Final words</h2>
+
+            <p>
+                Estimating the cost of generating content using the OpenAI API is essential to manage resources effectively and build sustainable AI-powered applications. But it doesn't have to be this complicated...
+            </p>
+
+            <p>
+                I have created a <a href="/">simple OpenAI Pricing Calculator</a>, that quickly gives you an estimate. Make sure to check it out.
+            </p>
+            <p>
+                🎉 <a href="/blog/">Check other blog posts</a> →
+            </p>
+        </main>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <p class="disclaimer">
+          This website is independently operated and has no association with OpenAI. All content provided is solely for informational purposes.
+        </p>
+        <p class="author">
+          Created by <a href="https://twitter.com/DeepakNesss" target="_blank">DeepakNess</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
