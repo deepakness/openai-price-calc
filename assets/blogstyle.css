@@ -1,0 +1,158 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+/* Header styling */
+.header {
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-name {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+}
+
+.menu-item {
+    color: blue;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+
+.menu-item:hover {
+    color: #4b4b4b;
+}
+
+/* Blog post title */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+/* Blog post text */
+p {
+    font-size: 1rem;
+    line-height: 1.625;
+    margin-bottom: 1rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Subheadings */
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+/* Quotes */
+blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 1rem 0;
+    color: #777;
+}
+
+/* Lists */
+ul, ol {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Links */
+a{
+    color: blue;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .menu {
+        margin-top: 1rem;
+    }
+}
+
+/* Footer styles */
+.footer {
+    background-color: #f7f7f7;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    color: #333;
+    text-align: center;
+}
+
+.disclaimer {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.author {
+    font-size: 0.8rem;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .container {
+        padding: 30px 20px;
+    }
+}
+
+/* Blog archive */
+.archive h2{
+    margin: 20px 0 0 0;
+}
