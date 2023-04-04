@@ -165,6 +165,8 @@ a{
 @media (max-width: 767px) {
     .container {
         padding: 30px 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
