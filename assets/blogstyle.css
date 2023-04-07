@@ -9,7 +9,7 @@
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #333;
     background-color: #f7f7f7;
 }
@@ -89,13 +89,13 @@ img {
 
 /* Subheadings */
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     margin: 1.5rem 0;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 1.2rem 0;
 }
