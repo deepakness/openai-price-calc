@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Primary Meta Tags -->
+    <title>Anthropic Claude Pricing Calculator</title>
+    <meta name="title" content="Anthropic Claude Pricing Calculator">
+    <meta name="description" content="Calculate the estimated cost of using Anthropic's Claude language model for your next project with this simple and intuitive price calculator.">
+    <link rel="canonical" href="https://openai.deepakness.com/claude/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://openai.deepakness.com/claude/">
+    <meta property="og:title" content="Anthropic Claude Pricing Calculator">
+    <meta property="og:description" content="Calculate the estimated cost of using Anthropic's Claude language model for your next project with this simple and intuitive price calculator.">
+    <meta property="og:image" content="https://openai.deepakness.com/assets/claude-og.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://openai.deepakness.com/claude/">
+    <meta property="twitter:title" content="Anthropic Claude Pricing Calculator">
+    <meta property="twitter:description" content="Calculate the estimated cost of using Anthropic's Claude language model for your next project with this simple and intuitive price calculator.">
+    <meta property="twitter:image" content="https://openai.deepakness.com/assets/claude-og.png">
+
+    <!-- Site Icon -->
+    <link rel="icon" type="image/png" href="https://openai.deepakness.com/assets/icon.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+    
+    <!-- Script file -->
+    <script src="./claudeScript.js"></script>
+
+    <!-- GSC -->
+    <meta name="google-site-verification" content="uCM8NwTbuGgtF9XVaeRKl2Tn2r-Pz4xbW-ia6TOQ5j4" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WGF4XXTT9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3WGF4XXTT9');
+    </script>
+
+  </head>
+  <body class="bg-gray-100">
+    <header class="bg-white py-4 shadow">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+          <a href="/" class="font-bold text-xl">🧮</a>
+          <nav class="flex">
+              <a href="/" class="text-blue-800 mx-2">Home</a>
+              <a href="/blog/" class="text-blue-800 mx-2">Blog</a>
+          </nav>
+      </div>
+    </header>
+    <div style="align-items: center;" class="max-w-lg mx-auto mt-8">
+      <a href="https://www.producthunt.com/posts/openai-gpt-price-calculator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-openai&#0045;gpt&#0045;price&#0045;calculator" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=381979&theme=light" alt="OpenAI&#0032;GPT&#0032;Price&#0032;Calculator - Estimate&#0032;price&#0032;for&#0032;using&#0032;OpenAI&#0032;API | Product Hunt" style="width: 200px; height: 40px;" width="200" height="40" /></a>
+    </div>
+    <div class="container max-w-lg mx-auto py-8 px-4 md:px-0">
+      <h1 class="text-2xl font-bold mb-6 max-w-lg mx-auto">Anthropic Claude Pricing Calculator</h1>
+      <p class="text-gray-700 mb-6 max-w-lg mx-auto">Calculate how much it will cost to generate certain number of words by using Anthropic Claude API.</p>
+      <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg mb-10">
+        <div class="mb-4">
+          <label for="input" class="block text-gray-700 font-bold mb-2">Enter number of words:</label>
+          <input type="number" id="input" value="1000" oninput="calculatePrice()" class="w-full px-4 py-2 rounded-lg border border-gray-400 focus:border-indigo-500 focus:shadow-outline-indigo focus:outline-none" style="-webkit-appearance: none;">
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              calculatePrice();
+            });
+          </script>
+          <div class="flex flex-wrap space-x-2 mt-2 mb-6">
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=1000; calculatePrice();">1k</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=5000; calculatePrice();">5k</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=10000; calculatePrice();">10k</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=100000; calculatePrice();">100k</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=500000; calculatePrice();">500k</button>
+            <button class="bg-transparent border border-gray-200 hover:bg-gray-200 rounded-lg py-1 px-3 text-sm font-medium text-gray-400" onclick="document.getElementById('input').value=1000000; calculatePrice();">1m</button>
+          </div>
+        </div>
+        <div class="mb-4">
+          <p class="block text-gray-700 font-bold mb-2">Select the model:</p>
+          <div class="block">
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier1" name="multiplier" value="1.45" checked="checked" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier1">Claude Instant v1 <span class="text-gray-400">($1.45/million characters)</span></label>
+            </div>
+            <div class="flex items-center mb-2">
+              <input type="radio" id="multiplier2" name="multiplier" value="8.60" onchange="calculatePrice()" class="mr-2">
+              <label for="multiplier2">Claude v1 <span class="text-gray-400">($8.60/million characters)</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 mt-6">
+          <p class="block text-gray-700 font-bold mb-2">Estimated price to generate <span class="text-green-500 text-l" id="words"></span> words: <span class="text-green-500 text-l" id="price"></span></p>
+        </div>
+      </div>
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">As Anthropic bills you based on the number of tokens sent in your prompt plus the number of tokens returned by the API, I am taking an assumption of prompt length of 100 words for each 1000 words generated by the Claude API. I am adding that cost to the final cost as well.</p>
+      <label for="input" class="block text-gray-700 font-bold mb-2">Enter the prompt length (approx. words per 1000 words):</label>
+          <input type="number" id="prompt" value="100" oninput="calculatePrice()" class="w-full px-4 py-2 mb-6 rounded-lg border border-gray-400 focus:border-indigo-500 focus:shadow-outline-indigo focus:outline-none" style="-webkit-appearance: none;">
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">But if your prompt length is different than the assumed value of 100 words per 1000 generated words, you can enter the value in the above field. And the final estimated price gets updated.</p>
+      <blockquote class="text-gray-700 italic border-l-2 pl-4 mb-6">
+        For Claude v1 Instant and Claude v1 models, the prompt prices are $0.43/million characters and $2.90/million characters respectively.
+      </blockquote>
+      <h2 class="text-xl font-bold mb-4 mt-6 max-w-lg mx-auto">How does this Anthropic Claude price calculator work?</h2>
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">This calculator takes the information provided on the official <a class="text-blue-500" href="https://cdn2.assets-servd.host/anthropic-website/production/images/FINAL-PRICING.pdf" target="_blank" rel="noopener noreferrer">Anthropic website</a> to calculate the estimated price based on the number of words. The calculator assumes that 1 word contains on average of 5 characters (plus 1 space); so 1 million characters are somewhere to be 166,667 words (1 million ÷ 6).</p>
+      <p class="text-gray-700 mb-4 max-w-lg mx-auto">Apart from this, I have also created the <strong><a class="text-blue-500" href="/">OpenAI GPT Price Calculator</a></strong> and <strong><a class="text-blue-500" href="/whisper/">Whisper Price Calculator</a></strong> that you may find helpful.</p>
+    </div>
+  </body>
+  <footer class="bg-gray-100 py-4">
+    <hr class="my-4 mx-auto max-w-sm md:max-w-lg border-gray-300">
+    <div class="max-w-lg mx-auto px-4 md:px-0">
+      <p class="mt-2 text-center text-gray-500 text-sm md:text-base">This site is not affiliated with Anthropic or OpenAI in any way.</p>
+      <p class="mt-2 text-center text-gray-500 text-sm md:text-base">Created by <a class="text-blue-500 hover:text-blue-600" href="https://twitter.com/DeepakNesss" target="_blank" rel="noopener noreferrer">DeepakNess</a></p>
+    </div>
+  </footer>  
+</html>
