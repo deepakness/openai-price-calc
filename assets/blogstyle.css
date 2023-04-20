@@ -189,3 +189,11 @@ a{
     font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
     font-size: 0.9rem;
 }
+
+code{
+    font-size: 90%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 4px;
+    background-color: #eee;
+}
