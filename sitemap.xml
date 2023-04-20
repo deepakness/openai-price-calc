@@ -46,12 +46,17 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://openai.deepakness.com/chatgpt-plus-in-india/</loc>
+    <loc>https://openai.deepakness.com/blog/chatgpt-plus-in-india/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://openai.deepakness.com/germany-banning-chatgpt/</loc>
+    <loc>https://openai.deepakness.com/blog/germany-banning-chatgpt/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://openai.deepakness.com/blog/openai-1k-tokens/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
