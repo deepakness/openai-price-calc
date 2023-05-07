@@ -70,4 +70,8 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+    <loc>https://openai.deepakness.com/blog/openai-playground-cost/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>
