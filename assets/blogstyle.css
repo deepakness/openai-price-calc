@@ -49,7 +49,7 @@ body {
 }
 
 .menu-item {
-    color: blue;
+    color: #3b82f680;
     text-decoration: none;
     margin-left: 1.5rem;
 }
@@ -121,7 +121,7 @@ li {
 
 /* Links */
 a{
-    color: blue;
+    color: #3b82f680;
 }
 
 /* Responsive styles */
