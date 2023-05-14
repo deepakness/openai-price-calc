@@ -6,13 +6,13 @@ function calculatePrice() {
     const checkMultiplier = document.querySelector('input[name="multiplier"]:checked').id;
   
     // Calculate the price
-    const wordsInMillionChars = 166667;
+    const inputPriceThousandTokens = multiplier * 1000 / 1000000;
     let price;
     if (checkMultiplier == "multiplier1") {
-        price = ((multiplier / wordsInMillionChars) * input) + ((0.43 / wordsInMillionChars) * (prompt * (input / 1000)));
+        price = (input / 750 * inputPriceThousandTokens) + ((input / 1000) * (prompt / 750) * (1.63 / 1000));
     }
     else {
-        price = ((multiplier / wordsInMillionChars) * input) + ((2.90 / wordsInMillionChars) * (prompt * (input / 1000)));
+        price = (input / 750 * inputPriceThousandTokens) + ((input / 1000) * (prompt / 750) * (11.02 / 1000));
     }
   
     // Update the output field
