@@ -5,7 +5,6 @@ function calculatePrice() {
     const checkMultiplier = document.querySelector('input[name="multiplier"]:checked').id;
   
     // Calculate the price
-    const inputPriceThousandTokens = multiplier * 1000 / 1000000;
     let price;
     if (checkMultiplier == "multiplier1") {
         price = input * multiplier;
